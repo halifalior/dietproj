@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>Your Daily Menu </h1>
+<h2>Your BMI is {{bmi}} and your daily calories limit is {{maxcal}}</h2>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{{ meal.pic }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ meal.title }}</h5>
+                <h5 class="card-cal">{{ meal.cal }}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
